@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Chicken Quiche', sans-serif;
+    background-image: url(img/fondoo.jpg);
+    background-size: cover;
+}   
+.contenedor {
+    height: 100%;
+} 
+.header {
+    position: fixed;
+    height: 80px;
+    background-color: rgb(255, 255, 255);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 80px;
+    line-height: 80px;
+    margin-left: 80%;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 80px;
+    list-style: none;
+}
+.nav-menu-item{
+    font-size: 30px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+.nav-menu-link {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0, 20px;
+    border-radius: 3px;
+    color: rgb(16, 70, 141);
+}
+.nav-menu-link:hover {
+    background-color: coral;
+    transition: .3s;
+    border-radius: 5px;
+    margin: 10px;
+}
+.open-menu, .close-menu{
+    display: none;
+}
+
+.banner video {
+    position: relative;
+    height: 400px;
+    width: 700px;
+    top: 90px;
+    cursor: pointer;
+    margin: 0 27%;
+    border-radius: 15px;
+}
+.reel-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 90px;
+    z-index: 90;
+}
+
+.reel-content section {
+    width: 300px;
+    height: 220px;
+    cursor: pointer;
+    background-color: deepskyblue;
+    border-radius: 10px;
+}
+.more {
+    position: absolute;
+    width: 250px;
+    height: 170px;
+    z-index: 85;
+    transition: .2s ease-in;
+    background-image: url(img/marco2.webp);
+    background-size: cover;
+    border: 1px solid black;
+    visibility: hidden;
+    box-shadow: 0px 0px 500px black;
+}
+.more .title-more {
+    margin: 1px 30%;
+}
+.more .title-more h4 {
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 20px;
+    background-color: coral;
+    color: white;
+    width: 100px;
+}
+.more a video{
+    width: 200px;
+    height: 100px;
+    margin: 5px 10%;
+    border-radius: 50px;
+}
+.more p{
+    display: flex;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    font-size: 4px;
+    margin: 0 auto;
+    background-color: coral;
+    border-radius: 15px;
+    padding: 2px;
+    color: white;
+}
+.more .more-detail {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2px auto;
+    left: 2px;
+    background-color: coral;
+    color: white;
+}
+.more .more-detail li{
+    font-size: 4px;
+    font-weight: 300;
+    margin: 1px auto;
+    border-radius: 1px;
+}
+.reel-content video {
+    width: 290px;
+    margin: 5px;
+    align-items: center;
+    border-radius: 10px;
+}
+.reel-content section:hover .more {
+    visibility: visible;
+    left: 40%;
+    top: 0;
+    transform: scale(4, 4);
+    border-radius: 10px;
+}
+.reel-content h3 {
+    text-align: center;
+    background-color: coral;
+    border-radius: 10px;
+}
+.reel-content a{
+    text-decoration: none;
+    color: black;
+}
+.reel-content #tit1 {
+    position: absolute;
+    height: 40px;
+    top: 80%;
+    justify-content: space-evenly;
+    color: white;
+}
+.reel-content #tit2 {
+    position:absolute;
+    height: 30px;
+    top: 80%;
+    justify-content: space-evenly;
+    left: 39%;
+}
+.reel-content #tit3 {
+    position: absolute;
+    height: 40px;
+    top: 80%;
+    justify-content: space-evenly;
+    color: white;
+}
+.carrousel{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    top: 120px;
+}
+.carrousel h2 {
+    background-color: coral;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.conteCarrousel{
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 200px;
+/*
+    scroll-snap-type: x mandatory;*/
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+.video:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.conteCarrouselController{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    background-color: rgb(240, 240, 240);
+    border-radius: 50px;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 3em;
+    color: coral;
+    transition: .3s ease-in;
+}
+.conteCarrouselController a:hover {
+    transform: scale(2 , 2);
+}
+.itemCarrouselArrows > a > i{
+    color: coral;
+    transition: .3s ease-in-out;
+}
+
+footer {
+    background-color: rgb(36, 35, 35);
+    height: 80px;
+    letter-spacing: 4px;
+    
+
+}
+footer a{ 
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 3px;
+    float: right;
+    margin: 35px 40px;
+    transform: color .5s ease;
+}
+
+footer p{
+    color: white;
+    text-decoration: none;
+    margin: 0 40px;
+    line-height: 80px;
+}
+footer a:hover{
+    background-color: rgb(117, 245, 84);
+    transition: .3s;
+}
+
+.estres {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 20px auto;
+    color: white;
+}
+
+.estres section {
+    position: relative;
+    height: 600px;
+    width: 900px;
+    top: 80px;
+    background-image: url(img/marco.webp);
+    border-radius: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.estres img {
+    width: 700px;
+    margin: 20px 100px;
+    border-radius: 15px;
+    transition: .3s ease-in;
+}
+
+.estres h3 {
+    text-align: center;
+    background-color: coral;
+    font-size: 3rem;
+    border-radius: 15px;
+}
+.estres p {
+    text-align: center;
+    margin: 10px 20px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 200;
+    background-color: rgb(15, 146, 140);
+    border-radius: 10px;
+    padding: 10px;
+    transition: .3s ease;
+}
+.estres p:hover, .estres img:hover {
+    transform: scale(1.1, 1.1);
+}
+
+/*MODO MOVIL*/ 
+@media screen {
+    
+}
